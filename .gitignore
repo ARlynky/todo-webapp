@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Neovim (dadbod)
+.lazy.lua
+
+# Database
+instance/

@@ -1,0 +1,21 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Documentation
+README.md
+
+# Build scripts
+pipeline.sh
+
+# Neovim
+.lazy.lua
+
+# Database
+instance/
