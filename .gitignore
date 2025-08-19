@@ -10,3 +10,6 @@ venv/
 # Database
 instance/
 *.sqlite3
+
+# User specific setup
+pipeline.sh
