@@ -4,8 +4,9 @@ __pycache__/
 venv/
 .venv/
 
-# Neovim (dadbod)
+# Neovim (dadbod) personal use
 .lazy.lua
 
 # Database
 instance/
+*.sqlite3
