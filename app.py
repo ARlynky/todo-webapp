@@ -34,7 +34,7 @@ def home():
 @app.route("/add", methods=["POST"])
 def add():
     text = request.form.get("text")
-    new_todo = Todo(text=text)  # type: ignore
+    new_todo = Todo(text=text)
     db.session.add(new_todo)
     db.session.commit()
     return redirect(url_for("home"))
@@ -42,13 +42,13 @@ def add():
 
 @app.route("/update", methods=["POST"])
 def update():
-    todoId = int(request.form.get("todo_id"))  # type: ignore
+    todoId = int(request.form.get("todo_id"))
     todoToUpdate = Todo.query.get(todoId)
 
     if request.form.get("complete"):
-        todoToUpdate.complete = True  # type: ignore
+        todoToUpdate.complete = True
     else:
-        todoToUpdate.complete = False  # type: ignore
+        todoToUpdate.complete = False
 
     db.session.commit()
     return redirect(url_for("home"))
@@ -56,7 +56,7 @@ def update():
 
 @app.route("/remove", methods=["POST"])
 def remove():
-    todoId = int(request.form.get("todo_id"))  # type: ignore
+    todoId = int(request.form.get("todo_id"))
     todoToRemove = Todo.query.get(todoId)
     db.session.delete(todoToRemove)
     db.session.commit()
